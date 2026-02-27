@@ -1,8 +1,6 @@
 # app.py
 # ============================================================
-# Active Wolfe Wave Scanner — Saudi Exchange (Tadawul)
-# Multi-Timeframe | Fixed P5 < P3 Rule
-# Streamlit Version
+#  فاحص موجات الولفي ويف في السوق السعودي
 # ============================================================
 
 import warnings
