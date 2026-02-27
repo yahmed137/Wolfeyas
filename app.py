@@ -432,7 +432,7 @@ def main():
     st.set_page_config(page_title="Wolfe Wave Scanner — Tadawul",
                        layout="wide")
 
-    st.title("🎯 Active Wolfe Wave Scanner — Tadawul")
+    st.title("🎯 فاحص موجات الولفي ويف في السوق السعودي")
 
     col1, col2 = st.columns([1, 3])
     with col1:
@@ -451,8 +451,8 @@ def main():
 
     with col2:
         st.markdown(
-            "فاحص موجات الولفي ويف"
-            "في السوق السعودي"
+            " تنوية هذا بحث عن موجات الولفي ويف"
+            "لا يجب الاعتماد عليه وقد يكون خطأ ويجب النظر ومتالعة الحركة السعرية "
         )
 
     if not run_scan:
