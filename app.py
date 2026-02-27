@@ -462,7 +462,7 @@ def main():
     tf_label, interval, period, resample_rule = TF_MAP[tf_key]
 
     st.subheader(f"Scan Parameters")
-    st.write(f"- Timeframe: **{tf_label}**")
+    st.write(f"- :الفاصل **{tf_label}**")
     st.write(f"- Period: **{period}**, Interval: **{interval}**")
 
     results, ohlc_data = scan_tickers(TADAWUL_TICKERS, period, interval, resample_rule)
@@ -492,12 +492,12 @@ def main():
     st.subheader(f"Scan Summary — {tf_label}")
     c1, c2 = st.columns(2)
     with c1:
-        st.metric("Bullish patterns", len(bullish_list))
+        st.metric("ولفي صاعد", len(bullish_list))
     with c2:
-        st.metric("Bearish patterns", len(bearish_list))
+        st.metric("ولفي هابك", len(bearish_list))
 
     # Tables
-    if view_choice in ["Bullish", "Both"]:
+    if view_choice in ["Bulish", "Both"]:
         st.markdown("### 📈 Bullish Wolfe Patterns")
         if bullish_list:
             st.dataframe(build_df(bullish_list))
