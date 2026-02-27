@@ -1,6 +1,6 @@
 # requirements.txt
 # ============================================================
-# Wolfe Wave Scanner — Tadawul (Streamlit App)
+# Wolfe Wave Scanner — Tadawul
 # pip install -r requirements.txt
 # ============================================================
 
