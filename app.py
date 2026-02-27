@@ -445,7 +445,7 @@ def main():
             options=["Bullish", "Bearish", "Both"],
             index=2
         )
-        run_scan = st.button("Run Scan")
+        run_scan = st.button("فحص الاسهم")
 
     with col2:
         st.markdown(
@@ -462,7 +462,7 @@ def main():
     tf_label, interval, period, resample_rule = TF_MAP[tf_key]
 
     st.subheader(f"Scan Parameters")
-    st.write(f"- :الفاصل **{tf_label}**")
+    st.write(f"- Timeframe: **{tf_label}**")
     st.write(f"- Period: **{period}**, Interval: **{interval}**")
 
     results, ohlc_data = scan_tickers(TADAWUL_TICKERS, period, interval, resample_rule)
@@ -512,14 +512,14 @@ def main():
             st.warning("No active bearish Wolfe Waves found.")
 
     # Charts (expanders to avoid huge page)
-    st.markdown("### Charts")
+    st.markdown("### الشارتات")
 
     if view_choice in ["Bullish", "Both"] and bullish_list:
         with st.expander("Show bullish charts"):
             for item in bullish_list:
                 tk = item['Ticker']
                 r = item['_r']
-                st.markdown(f"#### {tk} — Bullish")
+                st.markdown(f"#### {tk} — صاعد")
                 fig = plot_wolfe_chart(tk, ohlc_data[tk], r, tf_label)
                 st.pyplot(fig)
 
@@ -528,7 +528,7 @@ def main():
             for item in bearish_list:
                 tk = item['Ticker']
                 r = item['_r']
-                st.markdown(f"#### {tk} — Bearish")
+                st.markdown(f"#### {tk} — هابط")
                 fig = plot_wolfe_chart(tk, ohlc_data[tk], r, tf_label)
                 st.pyplot(fig)
 
