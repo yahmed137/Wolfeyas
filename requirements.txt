@@ -1,17 +1,18 @@
 # requirements.txt
 # ============================================================
 # Wolfe Wave Scanner — Tadawul (Streamlit App)
-#pip install -r requirements.txt
+# pip install -r requirements.txt
 # ============================================================
-streamlit
-yfinance
-mplfinance
-matplotlib
-numpy
-pandas
-scipy
-arabic-reshaper
-python-bidi
+
+streamlit==1.32.0
+yfinance==0.2.37
+mplfinance==0.12.10b0
+matplotlib==3.8.3
+numpy==1.26.4
+pandas==2.2.1
+scipy==1.12.0
+arabic-reshaper==3.0.0
+python-bidi==0.4.2
 
 
 # Optional: for better performance
