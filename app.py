@@ -435,13 +435,13 @@ def main():
     col1, col2 = st.columns([1, 3])
     with col1:
         tf_key = st.selectbox(
-            "Timeframe",
+            "الفاصل",
             options=list(TF_MAP.keys()),
             format_func=lambda k: TF_MAP[k][0],
             index=4  # default 1D
         )
         view_choice = st.selectbox(
-            "View",
+            "الفلتر",
             options=["Bullish", "Bearish", "Both"],
             index=2
         )
@@ -456,7 +456,7 @@ def main():
         )
 
     if not run_scan:
-        st.info("Select timeframe and click **Run Scan** to start.")
+        st.info("اختار الفاصل الزمني والفلتر ثم اضغط علي فحص الاسهم")
         return
 
     tf_label, interval, period, resample_rule = TF_MAP[tf_key]
@@ -515,7 +515,7 @@ def main():
     st.markdown("### الشارتات")
 
     if view_choice in ["Bullish", "Both"] and bullish_list:
-        with st.expander("Show bullish charts"):
+        with st.expander("عرض شارتات الولفي الصاعد"):
             for item in bullish_list:
                 tk = item['Ticker']
                 r = item['_r']
@@ -524,7 +524,7 @@ def main():
                 st.pyplot(fig)
 
     if view_choice in ["Bearish", "Both"] and bearish_list:
-        with st.expander("Show bearish charts"):
+        with st.expander("عرض شارتات الولفي الهابط"):
             for item in bearish_list:
                 tk = item['Ticker']
                 r = item['_r']
