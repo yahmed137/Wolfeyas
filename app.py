@@ -279,8 +279,7 @@ def plot_wolfe_chart(ticker, df, result, tf_label):
         is_low = pts[i]['type'] == 'L'
         dt_str = pts[i]['date'].strftime('%b %d')
         ax.annotate(
-            f'{labels_txt[i]}  {v[i]:.2f}
-{dt_str}',
+            f'{labels_txt[i]}  {v[i]:.2f}\n{dt_str}',
             xy=(zb[i], v[i]),
             xytext=(0, -28 if is_low else 28),
             textcoords='offset points',
@@ -301,18 +300,12 @@ def plot_wolfe_chart(ticker, df, result, tf_label):
     bt = '#2E7D32' if is_bull else '#C62828'
 
     info = (
-        f"  {direction.upper()} WOLFE WAVE
-"
-        f"  ─────────────────────
-"
-        f"  Last Close :  {last_close:.2f}
-"
-        f"  Entry (P5)  :  {entry:.2f}
-"
-        f"  Target 1→4 :  {target:.2f}
-"
-        f"  Potential    :  {pct:+.1f}%
-"
+        f"  {direction.upper()} WOLFE WAVE\n"
+        f"  ─────────────────────\n"
+        f"  Last Close :  {last_close:.2f}\n"
+        f"  Entry (P5)  :  {entry:.2f}\n"
+        f"  Target 1→4 :  {target:.2f}\n"
+        f"  Potential    :  {pct:+.1f}%\n"
         f"  Timeframe  :  {tf_label}"
     )
 
