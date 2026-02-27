@@ -451,8 +451,8 @@ def main():
 
     with col2:
         st.markdown(
-            "Scans Saudi Exchange symbols for **active** Wolfe Waves "
-            "(strict P5 rule, multi-order pivot scan)."
+            "فاحص موجات الولفي ويف"
+            "في السوق السعودي"
         )
 
     if not run_scan:
