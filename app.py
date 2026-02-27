@@ -430,7 +430,6 @@ def main():
     st.set_page_config(page_title="Wolfe Wave Scanner — Tadawul",
                        layout="wide")
 
-    st.title("🎯 Active Wolfe Wave Scanner — Tadawul")
     st.title("🎯 فاحص موجات الولفي ويف في السوق السعودي")
 
     col1, col2 = st.columns([1, 3])
