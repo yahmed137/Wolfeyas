@@ -514,7 +514,7 @@ def main():
     # Charts (expanders to avoid huge page)
     st.markdown("### الشارتات")
 
-    if view_choice in ["Bullish", "Both"] and bullish_list:
+    if view_choice in ["صاعد", "الكل"] and bullish_list:
         with st.expander("عرض شارتات الولفي الصاعد"):
             for item in bullish_list:
                 tk = item['Ticker']
@@ -523,7 +523,7 @@ def main():
                 fig = plot_wolfe_chart(tk, ohlc_data[tk], r, tf_label)
                 st.pyplot(fig)
 
-    if view_choice in ["Bearish", "Both"] and bearish_list:
+    if view_choice in ["هابط", "الكل"] and bearish_list:
         with st.expander("عرض شارتات الولفي الهابط"):
             for item in bearish_list:
                 tk = item['Ticker']
