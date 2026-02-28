@@ -442,7 +442,7 @@ def main():
         )
         view_choice = st.selectbox(
             "الفلتر",
-            options=["Bullish", "Bearish", "Both"],
+            options=["صاعد", "هابك", "الكل"],
             index=2
         )
         run_scan = st.button("فحص الاسهم")
@@ -497,14 +497,14 @@ def main():
         st.metric("ولفي هابط", len(bearish_list))
 
     # Tables
-    if view_choice in ["صاعد", "Both"]:
+    if view_choice in ["صاعد", "الكل"]:
         st.markdown("### 📈 Bullish Wolfe Patterns")
         if bullish_list:
             st.dataframe(build_df(bullish_list))
         else:
             st.warning("No active bullish Wolfe Waves found.")
 
-    if view_choice in ["هابط", "Both"]:
+    if view_choice in ["هابط", "الكل"]:
         st.markdown("### 📉 Bearish Wolfe Patterns")
         if bearish_list:
             st.dataframe(build_df(bearish_list))
