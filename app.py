@@ -494,17 +494,17 @@ def main():
     with c1:
         st.metric("ولفي صاعد", len(bullish_list))
     with c2:
-        st.metric("ولفي هابك", len(bearish_list))
+        st.metric("ولفي هابط", len(bearish_list))
 
     # Tables
-    if view_choice in ["Bulish", "Both"]:
+    if view_choice in ["صاعد", "Both"]:
         st.markdown("### 📈 Bullish Wolfe Patterns")
         if bullish_list:
             st.dataframe(build_df(bullish_list))
         else:
             st.warning("No active bullish Wolfe Waves found.")
 
-    if view_choice in ["Bearish", "Both"]:
+    if view_choice in ["هابط", "Both"]:
         st.markdown("### 📉 Bearish Wolfe Patterns")
         if bearish_list:
             st.dataframe(build_df(bearish_list))
