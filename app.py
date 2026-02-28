@@ -442,7 +442,7 @@ def main():
         )
         view_choice = st.selectbox(
             "الفلتر",
-            options=["صاعد", "هابك", "الكل"],
+            options=["صاعد", "هابط", "الكل"],
             index=2
         )
         run_scan = st.button("فحص الاسهم")
