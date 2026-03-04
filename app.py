@@ -720,7 +720,7 @@ if scan_btn:
                 c1, c2, c3 = st.columns(3)
                 c1.metric("آخر إغلاق", f"{item['last_close']:.2f}")
                 c2.metric("قاع (P5)", f"{item['entry']:.2f}")
-                c3.metric("هدف (1←4)", f"{item['target']:.2f}")
+                c3.metric("خط (1←4)", f"{item['target']:.2f}")
 
                 c4, c5 = st.columns(2)
                 c4.metric("النسبة", f"{item['pct']:+.1f}%")
@@ -759,7 +759,7 @@ if scan_btn:
                 c1, c2, c3 = st.columns(3)
                 c1.metric("آخر إغلاق", f"{item['last_close']:.2f}")
                 c2.metric("قمة (P5)", f"{item['entry']:.2f}")
-                c3.metric("هدف (1←4)", f"{item['target']:.2f}")
+                c3.metric("خط (1←4)", f"{item['target']:.2f}")
 
                 c4, c5 = st.columns(2)
                 c4.metric("النسبة", f"{item['pct']:+.1f}%")
