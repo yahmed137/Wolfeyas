@@ -690,11 +690,25 @@ if scan_btn:
     # ── Bullish Results ──────────────────────────────────────
     if show_bull and bullish_list:
         st.subheader("📈 نتائج الولفي الصاعد")
+        st.markdown(f"**الأسهم المحققة للشرط ({len(bullish_list)}):**")
+        tags_html = ""
         for item in bullish_list:
-            with st.expander(
-                f"🟢 {item['ticker'].split('.')[0]} — {item['name']} "
-                f"({item['pct']:+.1f}%)"
-            ):
+            tags_html += (
+                f"<span style='display:inline-block;background:#E8F5E9;"
+                f"color:#2E7D32;padding:4px 12px;margin:2px 4px;"
+                f"border-radius:16px;font-weight:bold;font-size:14px;'>"
+                f"🟢 {item['ticker'].split('.')[0]} — {item['name']}  "
+                f"({item['pct']:+.1f}%)</span>"
+            )
+        st.markdown(tags_html, unsafe_allow_html=True)
+
+        with st.expander("📈 عرض جميع نتائج الولفي الصاعد", expanded=False):
+            for item in bullish_list:
+                st.markdown("---")
+                st.markdown(
+                    f"### 🟢 {item['ticker'].split('.')[0]} — {item['name']} "
+                    f"({item['pct']:+.1f}%)"
+                )
                 try:
                     buf = plot_wolfe_chart(
                         item['ticker'], item['_df'], item['_r'], tf_label
@@ -715,11 +729,25 @@ if scan_btn:
     # ── Bearish Results ──────────────────────────────────────
     if show_bear and bearish_list:
         st.subheader("📉 نتائج الولفي الهابط")
+        st.markdown(f"**الأسهم المحققة للشرط ({len(bearish_list)}):**")
+        tags_html = ""
         for item in bearish_list:
-            with st.expander(
-                f"🔴 {item['ticker'].split('.')[0]} — {item['name']} "
-                f"({item['pct']:+.1f}%)"
-            ):
+            tags_html += (
+                f"<span style='display:inline-block;background:#FFEBEE;"
+                f"color:#C62828;padding:4px 12px;margin:2px 4px;"
+                f"border-radius:16px;font-weight:bold;font-size:14px;'>"
+                f"🔴 {item['ticker'].split('.')[0]} — {item['name']}  "
+                f"({item['pct']:+.1f}%)</span>"
+            )
+        st.markdown(tags_html, unsafe_allow_html=True)
+
+        with st.expander("📉 عرض جميع نتائج الولفي الهابط", expanded=False):
+            for item in bearish_list:
+                st.markdown("---")
+                st.markdown(
+                    f"### 🔴 {item['ticker'].split('.')[0]} — {item['name']} "
+                    f"({item['pct']:+.1f}%)"
+                )
                 try:
                     buf = plot_wolfe_chart(
                         item['ticker'], item['_df'], item['_r'], tf_label
