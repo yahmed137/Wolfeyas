@@ -417,7 +417,8 @@ def plot_wolfe_chart(ticker, df, result, tf_label):
     pct_y = (arrow_land_price + label_offset if is_bull
              else arrow_land_price - label_offset)
     ax.text(
-        arrow_land_zb, pct_y, f'{pct:+.1f}%\n{target:.2f}',
+        #arrow_land_zb, pct_y, f'{pct:+.1f}%\n{target:.2f}',
+        arrow_land_zb, pct_y, f'{pct:+.1f}%',
         fontsize=13, fontweight='bold', color=C_A,
         ha='center', va='bottom' if is_bull else 'top',
         fontfamily=ARABIC_FONT,
